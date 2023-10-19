@@ -12,14 +12,19 @@ export function initAdicionarItensAoCarrinho() {
         const itemImageSrc = itemInformations[0].getAttribute("src");
         const itemPrice = itemInformations[1].innerHTML;
         const itemName = itemInformations[2].innerHTML;
-        const filter = listItensCart.some((item) => item.name == itemName);
-        if (filter) {
+        
+        addItemToCart(itemImageSrc, itemPrice, itemName)
+    }
+
+    function addItemToCart(itemImg, itemPrice, itemName) {
+        const itemExistsInCart = listItensCart.some((item) => item.name == itemName);
+        if (!itemExistsInCart) {
+            initMensagemDeAlerta(true);
+        } else {
             initMensagemDeAlerta(false);
             return;
-        } else {
-            initMensagemDeAlerta(true);
         }
-        const newItemCart = new Item(itemImageSrc, itemPrice, itemName);
+        const newItemCart = new Item(itemImg, itemPrice, itemName);
         newItemCart.createItem();
         listItensCart.push(newItemCart);
         initIndicadorDeItens(listItensCart);
