@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Roboto";
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px 50px;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+}
+
+header .logo img {
+    width: 75px;
+}
+
+.login-carrinho ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-carrinho ul li > span{
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.login-carrinho ul li > span:hover {
+    color: #578263;
+    transform: scale(1.15);
+}
+
+.login-carrinho ul li .number_cart {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    font-size: .9rem;
+    width: 15px;
+    height: 15px;
+    top: -5px;
+    left: 20px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.login-carrinho ul li .number_cart:hover {
+    color: white;
+}
+
+.login-carrinho li {
+    position: relative;
+}
+
+.grid-vitrine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    padding: 0px 50px;
+}
+
+.grid-vitrine .vitrine{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, 302px);
+    justify-content: center;
+    gap: 3px;
+}
+
+.grid-vitrine .vitrine li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 15px;
+    border: 1px solid transparent;
+    transition: transform .3s ease;
+    background-color: white;
+    cursor: pointer;
+}
+
+.grid-vitrine .vitrine li:hover {
+    border: 1px solid black;
+}
+
+.grid-vitrine .vitrine li > span {
+    position: absolute;
+    bottom: 85px;
+    left: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px 5px 0px 0px;
+    font-size: .85rem;
+    font-weight: 300;
+}
+
+.grid-vitrine .vitrine li > i {
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.grid-vitrine .vitrine li > i:hover {
+    transform: scale(1.5);
+}
+
+.grid-vitrine .vitrine li .informacoes {
+    margin-top: 10px;
+    padding-left: 5px;
+    position: relative;
+}
+
+.grid-vitrine .vitrine li .informacoes span.btnAddCart{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    bottom: 0px;
+    right: 10px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.89);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.grid-vitrine .vitrine li .informacoes span.btnAddCart{
+    font-size: 1.2rem;
+}
+
+.grid-vitrine .vitrine li .informacoes span.btnAddCart:hover {
+    background-color: #578263;
+    transform: translateY(-5px) scale(1.1);
+}
+
+
+.grid-vitrine .vitrine li .informacoes h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.grid-vitrine .vitrine li .informacoes h2 {
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.621);
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.grid-vitrine .vitrine li .informacoes .info_adicionais {
+    font-size: .9rem;
+    padding-top: 5px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.621);
+}
+
+.grid-vitrine .vitrine li .informacoes .info_adicionais span {
+    padding-left: 5px;
+    position: relative;
+    color: black;
+}
+
+.grid-vitrine .vitrine li .informacoes .info_adicionais span::after {
+    position: absolute;
+    content: "";
+    width: 2.5px;
+    height: 2.5px;
+    border-radius: 50%;
+    background-color: black;
+    top: 8px;
+    left: -1px;
+}
+
+.grid-vitrine .vitrine li img {
+    width: 300px;
+}
+
+.login-carrinho li ul.modal-carrinho {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px 10px;
+    height: 100vh;
+    position: absolute;
+    right: -48px;
+    border-radius: 10px 0px 0px 10px;
+    z-index: 1000;
+    top: 60px;
+    background-color: white;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.236);
+    border: 1px solid rgba(0, 0, 0, 0.229);
+    border-right: none;
+    overflow-x: hidden;
+}
+
+.login-carrinho li ul.cart-open {
+    display: flex !important;
+    animation: carrinhoAbrindo .6s ease forwards;
+}
+
+@keyframes carrinhoAbrindo {
+    to {
+        width: 450px;
+    }
+
+    from {
+        width: 0px;
+    }
+}
+
+.modal-carrinho .item {
+    display: flex;
+    width: 420px;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.167);
+}
+
+.modal-carrinho .item {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.modal-carrinho .item div > h1 {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    max-width: 210px;
+}
+
+.modal-carrinho .item div .delete_button {
+    position: absolute;
+    top: 10px;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.851);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    right: 10px;
+    transition: all .2s ease;
+}
+
+.modal-carrinho .item div .delete_button:hover {
+    background-color: red;
+    transform: scale(1);
+}
+
+.modal-carrinho .item .quantidade > p{
+    font-size: .9rem;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+    padding: 5px 8px;
+    width: max-content;
+    border-radius: 30px;
+    margin-right: 50px;
+}
+
+.modal-carrinho .item .quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.modal-carrinho .item .quantidade input[type="number"] {
+    width: 45px;
+    padding: 5px;
+    box-shadow: inset 1px 0px 2px rgba(0, 0, 0, 0.163);
+    border-radius: 20px;
+    font-size: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    outline: none;
+}
+
+.modal-carrinho .item img {
+    width: 130px;
+    border-radius: 10px 30px;
+}
+
+
+.semItensCarrinho {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.semItensCarrinho h1 {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.semItensCarrinho span {
+    font-size: 4.5rem;
+    color: rgba(0, 0, 0, 0.851);
+    margin-bottom: 30px;
+}
+
+.semItensCarrinho span:hover {
+    color: black !important;
+    transform: scale(1) !important;
+}
+
+.esconderContainer {
+    display: none;
+}
+
+.mensagem_de_alerta {
+    display: none;
+    position: absolute;
+    right: 20px;
+    bottom: -60px;
+    font-size: 1rem;
+    font-weight: 300;
+    z-index: 1000;
+    background-color:  rgb(19, 19, 19);
+    color: white;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.mensagem_de_alerta::before {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 0;
+    border: 20px solid;
+    border-radius: 0px 0px 100px 100px;
+    border-color: rgb(19, 19, 19) transparent transparent;
+    top: -35px;
+    right: 25px;
+    transform: rotate(180deg);
+}
+
+.mensagem_de_alerta.alertMensageOn {
+    display: block;
+    animation: alertMensage .3s ease;
+}
+
+@keyframes alertMensage {
+    to {
+        transform: scale(1);
+    }
+
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+.totalCarrinho {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.222);
+}
+
+.totalCarrinho .subTotal h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.subTotal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.subTotal .valorTotal {
+    padding: 7px 13px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.89);
+    color: white;
+    border-radius: 15px;
+}
+
+.totalCarrinho button {
+    font-size: 1.1rem;
+    background-color: #578263;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.227);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.267);
+    transition: all .2s ease;cursor: pointer;
+}
+
+.totalCarrinho button:hover {
+    background-color: #385340;
+    transform: translateY(-1px) scale(1.005);
+}
+
+.totalCarrinho.aparecerContainer {
+    display: flex;
+}
