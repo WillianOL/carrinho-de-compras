@@ -1,21 +1,20 @@
-import { listItensCart } from "./adicionarItensAoCarrinho.js";
+import { listItemsCart } from "../index.js";
 import initTotalValorCarrinho from "./totalValorCarrinho.js";
 
 export default function changeValue({target}) {
     const inputPerent = target.parentElement
     const valueItem = inputPerent.querySelector(".precoProduto")
-    const input = inputPerent.querySelector("input")
-    const nomeProduto = inputPerent.parentElement.querySelector(".nomeProduto").innerHTML
-    const filtro = listItensCart.filter(item => item.name == nomeProduto)
-    const formatValue = +filtro[0].price.replace("R$", "").replace(".", "").replace(",", ".")
-    let result;
-    if(+input.value <= 1) {
-        valueItem.innerHTML = filtro[0].price
-        input.value = 1
+    const inputItem = inputPerent.querySelector("input")
+    const productName = inputPerent.parentElement.querySelector(".nomeProduto").innerHTML
+    const itemInObjectList = listItemsCart.filter(item => item.name == productName)
+    const formatValue = +itemInObjectList[0].price.replace("R$", "").replace(".", "").replace(",", ".")
+    let result = (formatValue * (+inputItem.value)).toFixed(2)
+    if(+inputItem.value <= 1) {
+        valueItem.innerHTML = itemInObjectList[0].price
+        inputItem.value = 1
     }else {
-        result = (formatValue * (+input.value)).toFixed(2)
-        valueItem.innerHTML = `R$${result}`
+        valueItem.innerHTML = `R$${result.replace(/\./g, ",")}`
     }
-    filtro[0].quantidade = +input.value
+    itemInObjectList[0].quantidade = +inputItem.value
     initTotalValorCarrinho(result - formatValue);
 }

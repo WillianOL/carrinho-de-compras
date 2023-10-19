@@ -9,7 +9,6 @@ export default class Item {
         this.name = name,
         this.quantidade = 1
     }
-
     createItem() {
         const containerItem = document.createElement("li");
         containerItem.classList.add("item")
@@ -23,10 +22,10 @@ export default class Item {
             </div>
             <span class="material-symbols-outlined delete_button">delete_forever</span>
         </div>`
-        const inputQuantidade = containerItem.querySelector(".numeroDeItens")
-        const deletButton = containerItem.querySelector(".delete_button")
-        inputQuantidade.addEventListener("change", changeValue)
-        deletButton.addEventListener("click", initRemoverItensCarrinho)
+        const inputQuantityOfItems = containerItem.querySelector(".numeroDeItens")
+        const buttonDeletItem = containerItem.querySelector(".delete_button")
+        inputQuantityOfItems.addEventListener("change", changeValue)
+        buttonDeletItem.addEventListener("click", initRemoverItensCarrinho)
         cartContainer.appendChild(containerItem)
     }
 }

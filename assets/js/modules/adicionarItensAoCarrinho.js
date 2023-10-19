@@ -2,9 +2,9 @@ import initMensagemDeAlerta from "./mensagemDeAlerta.js";
 import initIndicadorDeItens from "./indicadorDeItensCarrinho.js";
 import Item from "./criarItemCarrinho.js";
 import initTotalValorCarrinho from "./totalValorCarrinho.js";
+import { listItemsCart } from "../index.js";
 
 const buttonsAddItemToCart = document.querySelectorAll(".btnAddCart");  
-export let listItensCart = [];
 export function initAdicionarItensAoCarrinho() {
     function takeItemInformation({ target }) {
         const itemCart = target.parentElement.parentElement;
@@ -17,7 +17,7 @@ export function initAdicionarItensAoCarrinho() {
     }
 
     function addItemToCart(itemImg, itemPrice, itemName) {
-        const itemExistsInCart = listItensCart.some((item) => item.name == itemName);
+        const itemExistsInCart = listItemsCart.some((item) => item.name == itemName);
         if (!itemExistsInCart) {
             initMensagemDeAlerta(true);
         } else {
@@ -26,8 +26,8 @@ export function initAdicionarItensAoCarrinho() {
         }
         const newItemCart = new Item(itemImg, itemPrice, itemName);
         newItemCart.createItem();
-        listItensCart.push(newItemCart);
-        initIndicadorDeItens(listItensCart);
+        listItemsCart.push(newItemCart);
+        initIndicadorDeItens(listItemsCart);
         initTotalValorCarrinho();
     }
 
