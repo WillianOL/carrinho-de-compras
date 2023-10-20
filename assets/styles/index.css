@@ -7,7 +7,9 @@
     list-style: none;
     font-family: "Roboto";
 }
-
+/* 
+    Cabeçalho
+*/
 header {
     display: flex;
     align-items: center;
@@ -26,6 +28,10 @@ header .logo img {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.login-carrinho li {
+    position: relative;
 }
 
 .login-carrinho ul li > span{
@@ -58,11 +64,9 @@ header .logo img {
 .login-carrinho ul li .number_cart:hover {
     color: white;
 }
-
-.login-carrinho li {
-    position: relative;
-}
-
+/* 
+    Grid dos produtos
+*/
 .grid-vitrine {
     display: flex;
     align-items: center;
@@ -80,7 +84,9 @@ header .logo img {
     justify-content: center;
     gap: 3px;
 }
-
+/* 
+    Produto 
+*/
 .grid-vitrine .vitrine li {
     display: flex;
     flex-direction: column;
@@ -95,7 +101,7 @@ header .logo img {
 .grid-vitrine .vitrine li:hover {
     border: 1px solid black;
 }
-
+/* Preco produto */
 .grid-vitrine .vitrine li > span {
     position: absolute;
     bottom: 85px;
@@ -106,7 +112,7 @@ header .logo img {
     font-size: .85rem;
     font-weight: 300;
 }
-
+/* Icone de favorito */
 .grid-vitrine .vitrine li > i {
     font-size: 1rem;
     position: absolute;
@@ -119,7 +125,9 @@ header .logo img {
 .grid-vitrine .vitrine li > i:hover {
     transform: scale(1.5);
 }
-
+/* 
+    Informações do produto
+*/
 .grid-vitrine .vitrine li .informacoes {
     margin-top: 10px;
     padding-left: 5px;
@@ -138,19 +146,15 @@ header .logo img {
     padding: 5px 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.89);
+    font-size: 1.2rem;
     cursor: pointer;
     transition: all .2s ease;
-}
-
-.grid-vitrine .vitrine li .informacoes span.btnAddCart{
-    font-size: 1.2rem;
 }
 
 .grid-vitrine .vitrine li .informacoes span.btnAddCart:hover {
     background-color: #578263;
     transform: translateY(-5px) scale(1.1);
 }
-
 
 .grid-vitrine .vitrine li .informacoes h1 {
     font-size: 1.1rem;
@@ -187,11 +191,9 @@ header .logo img {
     top: 8px;
     left: -1px;
 }
-
-.grid-vitrine .vitrine li img {
-    width: 300px;
-}
-
+/* 
+    Carrinho de compras
+*/
 .login-carrinho li ul.modal-carrinho {
     display: none;
     align-items: center;
@@ -225,22 +227,17 @@ header .logo img {
         width: 0px;
     }
 }
-
+/* Item carrinho */
 .modal-carrinho .item {
     display: flex;
     width: 420px;
+    position: relative;
     align-items: center;
     gap: 20px;
     padding: 5px 20px;
     border-radius: 30px;
     border: 1px solid rgba(0, 0, 0, 0.226);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.167);
-}
-
-.modal-carrinho .item {
-    display: flex;
-    gap: 20px;
-    position: relative;
 }
 
 .modal-carrinho .item div > h1 {
@@ -305,79 +302,9 @@ input::-webkit-inner-spin-button {
     width: 130px;
     border-radius: 10px 30px;
 }
-
-
-.semItensCarrinho {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.semItensCarrinho h1 {
-    font-size: 1.7rem;
-    font-weight: 400;
-}
-
-.semItensCarrinho span {
-    font-size: 4.5rem;
-    color: rgba(0, 0, 0, 0.851);
-    margin-bottom: 30px;
-}
-
-.semItensCarrinho span:hover {
-    color: black !important;
-    transform: scale(1) !important;
-}
-
-.esconderContainer {
-    display: none;
-}
-
-.mensagem_de_alerta {
-    display: none;
-    position: absolute;
-    right: 20px;
-    bottom: -60px;
-    font-size: 1rem;
-    font-weight: 300;
-    z-index: 1000;
-    background-color:  rgb(19, 19, 19);
-    color: white;
-    padding: 20px 10px;
-    border-radius: 10px;
-}
-
-.mensagem_de_alerta::before {
-    position: absolute;
-    content: " ";
-    width: 0;
-    height: 0;
-    border: 20px solid;
-    border-radius: 0px 0px 100px 100px;
-    border-color: rgb(19, 19, 19) transparent transparent;
-    top: -35px;
-    right: 25px;
-    transform: rotate(180deg);
-}
-
-.mensagem_de_alerta.alertMensageOn {
-    display: block;
-    animation: alertMensage .3s ease;
-}
-
-@keyframes alertMensage {
-    to {
-        transform: scale(1);
-    }
-
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-}
-
+/* 
+    Fechar pedido e total do carrinho
+*/
 .totalCarrinho {
     display: none;
     align-items: center;
@@ -426,4 +353,104 @@ input::-webkit-inner-spin-button {
 
 .totalCarrinho.aparecerContainer {
     display: flex;
+}
+/* Aviso de não pssuir itens no carrinho */
+.semItensCarrinho {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.semItensCarrinho h1 {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.semItensCarrinho span {
+    font-size: 4.5rem;
+    color: rgba(0, 0, 0, 0.851);
+    margin-bottom: 30px;
+}
+
+.semItensCarrinho span:hover {
+    color: black !important;
+    transform: scale(1) !important;
+}
+
+.esconderContainer {
+    display: none;
+}
+/* Mensagem de alerta carrinho */
+.mensagem_de_alerta {
+    display: none;
+    position: absolute;
+    right: 20px;
+    bottom: -60px;
+    font-size: 1rem;
+    font-weight: 300;
+    z-index: 1000;
+    background-color:  rgb(19, 19, 19);
+    color: white;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.mensagem_de_alerta::before {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 0;
+    border: 20px solid;
+    border-radius: 0px 0px 100px 100px;
+    border-color: rgb(19, 19, 19) transparent transparent;
+    top: -35px;
+    right: 25px;
+    transform: rotate(180deg);
+}
+
+.mensagem_de_alerta.alertMensageOn {
+    display: block;
+    animation: alertMensage .3s ease;
+}
+
+@keyframes alertMensage {
+    to {
+        transform: scale(1);
+    }
+
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width: 500px) {
+    .login-carrinho li ul.cart-open {
+        max-width: 80vw;
+        padding: 10px 20px;
+    }
+
+    .login-carrinho li ul .totalCarrinho h1{
+        font-size: 1rem;
+    }
+
+    .login-carrinho li ul .totalCarrinho button {
+        padding: 10px 20px;
+    }
+
+    .login-carrinho li ul li.item {
+        width: 380px;
+        padding: 15px 20px;
+    }
+
+    .login-carrinho li ul li.item img {
+        width: 110px;
+    }
+
+    .login-carrinho li ul li.item h1 {
+        max-width: 150px;
+        font-size: 1.2rem;
+    }
 }
