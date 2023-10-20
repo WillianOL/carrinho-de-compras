@@ -428,7 +428,7 @@ input::-webkit-inner-spin-button {
 
 @media (max-width: 500px) {
     .login-carrinho li ul.cart-open {
-        max-width: 80vw;
+        max-width: 90vw;
         padding: 10px 20px;
     }
 
@@ -437,11 +437,15 @@ input::-webkit-inner-spin-button {
     }
 
     .login-carrinho li ul .totalCarrinho button {
-        padding: 10px 20px;
+        padding: 10px;
+        font-size: 1rem;
     }
 
     .login-carrinho li ul li.item {
-        width: 380px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: baseline;
+        width: 100%;
         padding: 15px 20px;
     }
 
@@ -450,7 +454,11 @@ input::-webkit-inner-spin-button {
     }
 
     .login-carrinho li ul li.item h1 {
-        max-width: 150px;
+        max-width: 120px;
         font-size: 1.2rem;
+    }
+
+    .modal-carrinho .item .quantidade > p {
+        margin-right: 10px;
     }
 }
