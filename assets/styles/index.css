@@ -442,9 +442,6 @@ input::-webkit-inner-spin-button {
     }
 
     .login-carrinho li ul li.item {
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: baseline;
         width: 100%;
         padding: 15px 20px;
     }
