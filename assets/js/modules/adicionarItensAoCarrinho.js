@@ -11,8 +11,7 @@ export function initAdicionarItensAoCarrinho() {
         const itemInformations = itemCart.querySelectorAll("[data-informacoes]");
         const itemImageSrc = itemInformations[0].getAttribute("src");
         const itemPrice = itemInformations[1].innerHTML;
-        const itemName = itemInformations[2].innerHTML;
-        
+        const itemName = itemInformations[2].innerHTML;  
         addItemToCart(itemImageSrc, itemPrice, itemName)
     }
 
