@@ -69,7 +69,24 @@
 	 <div align="center">
 		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/43ccf861-1739-4a1a-b15a-44475cb8ad5b" width="650px">
 	 </div>
+	<p>A função "addItemToCart" é responsável por adicionar o item ao carrinho, e com um simples código verificar se o item já está incluso no carrinho e disparar a mensagem de alerta. Fiz a validação criando uma array chamada "listItemsCart" no arquivo principal e importanto ela para utilizar ela. Depois, utilizando o método some fiz um loop para saber se o item já existe no carrinho, retornando um valor booleano. No IF, se o item já existir mostra a mensagem de alerta e da o return para parar a execução do código. Depois com a class o item é criado e colocar na array "listItemsCart". Ao final, executa a função "initIndicardorDeItens" e "initTotalValorCarrinho".</p>
+	<h4>Itens/funções importadas</h4>
+	<div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/5869727c-9c5f-45a0-adac-7a8bbea9dddf" width="650px">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/a1b69d6f-a4da-4f22-8d76-b4628aaedfa5" width="650px">
+	 </div>
+	<h4>Função para adicionar itens ao carrinho</h4>
+	 <div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/e3253a01-afbe-47cb-992b-97ca0846fd19" width="650px">
+	 </div>
+</div>
 
+<div>
+	<h3>Apagar itens do carrinho</h3>
+	<p>Ao clicar no botão de remover o item do carrinho, a função "initRemoverItensCarrinho" é executada. Nela, é feito um filtro na array de itens que retorna o item que foi escolhido para excluir da array, com o método shift, esse item é excluido da array e o elemento HTML(item na página) é removido. Ao final executando a as funções "initIndicadorDeItens"(a lista atualizada sem o item) e "initAtualizarValorExcluido"(passando o item clicado).</p>
+	 <div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/11f71856-6b2b-421a-b8f6-9603bedf3fb4" width="650px">
+	 </div>
 </div>
 
 
