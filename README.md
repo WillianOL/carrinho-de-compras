@@ -82,6 +82,18 @@
 </div>
 
 <div>
+	<h3>Class para criar os itens</h3>
+	<p>Para criar os itens que vão ser colocados no carrinho, criei uma class chamada "Item". Primeiro, no constructor é criado um objeto com a url da imagem, nome, preco e a quantidade padrão que é 1.</p>
+	 <div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/6988f0dd-a326-4a97-9ec1-5ad821f790f8" width="650px">
+	 </div>
+	<p>Depois, no método "createItem" é criado um elemento html li, adicionado a classe "item" e feito um innerHTML com a estrutura do item do carrinho, com a url da imagem, o nome e o preco. Ao final, no botão de deletar é adicionado um evento de click que chama a função "initRemoverItensCarrinho" e no input do número de itens é adicionado um evento de change que chama a função "changeValue".</p>
+	 <div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/b1e96be8-9eac-4115-97e7-2889115990d7" width="650px">
+	 </div>
+</div>
+
+<div>
 	<h3>Apagar itens do carrinho</h3>
 	<p>Ao clicar no botão de remover o item do carrinho, a função "initRemoverItensCarrinho" é executada. Nela, é feito um filtro na array de itens que retorna o item que foi escolhido para excluir da array, com o método shift, esse item é excluido da array e o elemento HTML(item na página) é removido. Ao final executando a as funções "initIndicadorDeItens"(a lista atualizada sem o item) e "initAtualizarValorExcluido"(passando o item clicado).</p>
 	 <div align="center">
