@@ -1,4 +1,4 @@
-![Função - pegar informações item](https://github.com/WillianOL/carrinho-de-compras/assets/112639055/3c5e0911-594e-47dd-bfdb-738d1afcc0bb)<div> 
+<div> 
   <h1 align="center">Carrinho de compras - JS👨‍💻</h1> 
 </div>
 
