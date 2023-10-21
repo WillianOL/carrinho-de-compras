@@ -1,4 +1,4 @@
-<div> 
+![Função - pegar informações item](https://github.com/WillianOL/carrinho-de-compras/assets/112639055/3c5e0911-594e-47dd-bfdb-738d1afcc0bb)<div> 
   <h1 align="center">Carrinho de compras - JS👨‍💻</h1> 
 </div>
 
@@ -46,3 +46,51 @@
 ◻<a href="https://willianol.github.io/carrinho-de-compras/assets/index.html">Carrinho de compras Adidas</a>
 
 ## <img align="center" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> JavaScript
+
+<div>
+	<h3>Organização</h3>
+	<p>Como esse projeto tem várias funcionalides, resolvi separar cada parte do código em modulos. Para assim, ficar bem mais organizado e fácil de dar manutenção ao código.</p>
+	 <div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/b1d2dd46-c503-4ae5-975b-6f6fbd3b8e39" width="250px">
+	 </div>
+</div>
+
+<div>
+	<h3>Acessar carrinho</h3>
+	<p>Para abrir e fechar o carrinho, utilizei uma função simples que pega o botão de abrir o carrinho e adiciona um evento de click. Quando clicado, é chamada a função "openOrCloseCart" que adiciona ou remove a classe "cart-open" que mostra o conteiner do carrinho na tela. Depois executa a função que retira a mensagem de alerta.(explicado posteriormente)</p>
+	 <div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/c2c2feff-a24d-4ced-a812-0d5ceaa608d8" width="650px">
+	 </div>
+</div>
+
+<div>
+	<h3>Adicionar itens ao carrinho</h3>
+	<p>Para adicionar os itens ao carrinho, separei em duas funções diferentes, uma para pegar as informações do item(nome, preco, imagem) e outra para adicionar o item ao carrinho. Na de pegar as informações, criei a função "TakeItemInformation" que é chamada quando o botão de adicionar ao carrinho e clicado. Nela, peguei o item inteiro através do target e extrai o nome, preco e url da imagem do item clicado. Ao final a função "addItemToCart" é executada passando como argumentos as informações do item.</p>
+	 <div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/43ccf861-1739-4a1a-b15a-44475cb8ad5b" width="650px">
+	 </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
