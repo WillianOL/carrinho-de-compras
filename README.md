@@ -101,6 +101,14 @@
 	 </div>
 </div>
 
+<div>
+	<h3>Mudar quantidade e valor do item</h3>
+	<p>Quando a quantidade do item é mudada, a função "changeValue" é chamada. Nela, é feito um filtro para pegar </p>
+	 <div align="center">
+		<img align="center" src="https://github.com/WillianOL/carrinho-de-compras/assets/112639055/11f71856-6b2b-421a-b8f6-9603bedf3fb4" width="650px">
+	 </div>
+</div>
+
 
 
 
