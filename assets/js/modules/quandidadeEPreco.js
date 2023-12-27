@@ -12,9 +12,12 @@ export default function changeValue({target}) {
     if(+inputItem.value <= 1) {
         valueItem.innerHTML = itemInObjectList[0].price
         inputItem.value = 1
+        itemInObjectList[0].quantidade = 1
         initTotalValorCarrinho();
     }else {
         valueItem.innerHTML = `R$${result.replace(/\./g, ",")}`
+        itemInObjectList[0].quantidade = +inputItem.value
         initTotalValorCarrinho(result - formatValue)
     }
+    
 }
